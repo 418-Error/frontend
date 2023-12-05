@@ -1,13 +1,15 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import styles from './app.module.scss';
 
-import NxWelcome from './nx-welcome';
-import {useDispatch, useSelector} from "react-redux";
-import {AppDispatch, RootState} from "@draco/store";
-import {useEffect} from "react";
-import {fetchUser} from "@draco/domains/users";
+import {useDispatch, useSelector} from 'react-redux'
+import {AppDispatch, RootState} from '@draco/store'
+import {useEffect} from 'react'
+import {fetchUser} from '@draco/domains/users'
+import {Route, Routes} from 'react-router'
+import {LOGIN_URL} from '@draco/routes'
+import {PageLogin} from '@draco/pages/login'
 
-export function App() {
+export default function App() {
   const dispatch = useDispatch<AppDispatch>()
 
   const user = useSelector((rootState: RootState) => rootState.user)
@@ -21,16 +23,10 @@ export function App() {
   }, [dispatch])
 
   return (
-    <div className="bg-red-500">
-      Coucou
-
-      { user.isAuthenticated ? (
-        <div>Vous êtes connecté</div>
-      ) : (
-        <div>Fils de pute connectes toi</div>
-      )}
+    <div>
+      <Routes>
+        <Route path={`${LOGIN_URL}/*`} element={<PageLogin />} />
+      </Routes>
     </div>
-  );
+  )
 }
-
-export default App;
