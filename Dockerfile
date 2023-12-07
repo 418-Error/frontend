@@ -1,18 +1,26 @@
-FROM node:16-alpine AS builder
+FROM node:20-alpine AS builder
 LABEL authors="nathaelbonnal"
 
 WORKDIR /app
+
+ARG NODE_ENV
+ENV NODE_ENV $NODE_ENV
 
 ARG NX_BACKEND
 ENV NX_BACKEND $NX_BACKEND
 
 COPY package.json .
 COPY yarn.lock .
-COPY .yarn .yarn
-COPY .yarnrc.yml .yarnrc.yml
-RUN yarn install --immutable
+RUN yarn install --immutable --production
 
 COPY . .
 RUN yarn build
 
 FROM nginx:latest
+
+COPY --from=builder /app/dist/nx-standalone-react/ /usr/share/nginx/html/
+# COPY nginx.conf /etc/nginx/nginx.conf
+
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]
