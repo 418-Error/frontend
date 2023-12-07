@@ -9,6 +9,7 @@
   },
   "private": true,
   "dependencies": {
+    "@headlessui/react": "^1.7.17",
     "@heroicons/react": "^2.0.18",
     "@radix-ui/react-dialog": "^1.0.5",
     "@radix-ui/react-tooltip": "^1.0.7",
