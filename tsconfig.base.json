@@ -17,10 +17,14 @@
     "paths": {
       "@draco/api-client": ["libs/shared/api-client/src/index.ts"],
       "@draco/domains/users": ["libs/domains/users/src/index.ts"],
+      "@draco/enums": ["libs/shared/enums/src/index.ts"],
       "@draco/interfaces": ["libs/shared/interfaces/src/index.ts"],
-      "@draco/store": ["libs/state/store/src/index.ts"],
+      "@draco/pages/layout": ["libs/pages/layout/src/index.ts"],
       "@draco/pages/login": ["libs/pages/login/src/index.ts"],
-      "@draco/routes": ["libs/shared/routes/src/index.ts"]
+      "@draco/routes": ["libs/shared/routes/src/index.ts"],
+      "@draco/store": ["libs/state/store/src/index.ts"],
+      "@draco/ui": ["libs/shared/ui/src/index.ts"],
+      "@draco/utils": ["libs/shared/utils/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -1,4 +1,5 @@
 import {ReactElement} from 'react'
+import Home from "./pages/home";
 
 interface RouterProps {
   path: string
@@ -8,4 +9,11 @@ interface RouterProps {
   darkMode?: boolean
 }
 
-export const ROUTER: RouterProps[] = []
+export const ROUTER: RouterProps[] = [
+  {
+    path: "/",
+    component: <Home />,
+    protected: false,
+    layout: true
+  }
+]

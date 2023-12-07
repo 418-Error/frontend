@@ -6,7 +6,8 @@ import {createRoot} from 'react-dom/client'
 import {ReactQueryDevtools} from 'react-query/devtools'
 import {BrowserRouter} from 'react-router-dom'
 import {setupStore} from '@draco/store'
-import {Provider} from "react-redux";
+import {Provider} from 'react-redux'
+import { Provider as TooltipProvider } from '@radix-ui/react-tooltip'
 
 
 const container = document.getElementById('root') || document.createElement('div')
@@ -23,7 +24,10 @@ root.render(
 
       <Provider store={store}>
         <BrowserRouter>
-          <App />
+          <TooltipProvider>
+            <App />
+          </TooltipProvider>
+
         </BrowserRouter>
       </Provider>
     </QueryClientProvider>
