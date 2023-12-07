@@ -11,7 +11,7 @@ ENV NX_BACKEND $NX_BACKEND
 
 COPY package.json .
 COPY yarn.lock .
-RUN yarn install --immutable --production
+RUN yarn install --immutable
 
 COPY . .
 RUN yarn build
