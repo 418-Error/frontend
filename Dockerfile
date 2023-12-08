@@ -10,7 +10,7 @@ ARG NX_BACKEND
 ENV NX_BACKEND $NX_BACKEND
 
 COPY package.json .
-COPY yarn.lock .
+# COPY yarn.lock .
 RUN yarn install --immutable
 
 COPY . .
