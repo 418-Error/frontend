@@ -17,7 +17,7 @@ const colorsZinc = {
   700: '#101420',
   800: '#0B0E16',
   900: '#000000',
-}
+};
 
 const colorsIndigo = {
   50: '#F2F3FE',
@@ -30,7 +30,7 @@ const colorsIndigo = {
   700: '#2F289A',
   800: '#1F197C',
   900: '#130F66',
-}
+};
 
 const slideEntrances = () => {
   const genSlide = (suffix, offset) => ({
@@ -50,11 +50,11 @@ const slideEntrances = () => {
       from: { transform: `translateY(-${offset})` },
       to: { transform: 'translateY(0)' },
     },
-  })
+  });
   return {
     ...genSlide('sm', '4px'),
-  }
-}
+  };
+};
 
 const slideExits = () => {
   const genSlide = (suffix, offset) => ({
@@ -74,18 +74,18 @@ const slideExits = () => {
       from: { transform: 'translateY(0)' },
       to: { transform: `translateY(${offset})` },
     },
-  })
+  });
   return {
     ...genSlide('sm', '4px'),
-  }
-}
+  };
+};
 
 const easingFunctions = {
   // https://gist.github.com/argyleink/36e1c0153d2a783d513bd29c9f25aaf2
   'ease-in-quad': 'cubic-bezier(0.55, 0.085, 0.68, 0.53)',
   'ease-out-quad': 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',
   'ease-out-quart': 'cubic-bezier(0.165, 0.84, 0.44, 1)',
-}
+};
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -111,7 +111,8 @@ module.exports = {
       },
       minHeight: {
         'page-container': 'calc(100vh - theme(spacing.navbar-height))',
-        'page-container-wbanner': 'calc(100vh - theme(spacing.navbar-height) - 40px)',
+        'page-container-wbanner':
+          'calc(100vh - theme(spacing.navbar-height) - 40px)',
       },
       fontFamily: {
         sans: ['Roboto', 'Helvetica', 'sans-serif'],
@@ -168,13 +169,16 @@ module.exports = {
       },
       backgroundImage: {
         'scroll-shadow-bottom':
-            'linear-gradient(180deg,hsla(0,0%,100%,0) 40%,hsla(0,0%,100%,0)),radial-gradient(farthest-side at 50% 0,rgba(0,0,0,.13),transparent)',
+          'linear-gradient(180deg,hsla(0,0%,100%,0) 40%,hsla(0,0%,100%,0)),radial-gradient(farthest-side at 50% 0,rgba(0,0,0,.13),transparent)',
         'scroll-shadow-up':
-            'radial-gradient(farthest-side at 50% 0,rgba(0,0,0,.13),transparent),linear-gradient(180deg,hsla(0,0%,100%,0) 40%,hsla(0,0%,100%,0))',
+          'radial-gradient(farthest-side at 50% 0,rgba(0,0,0,.13),transparent),linear-gradient(180deg,hsla(0,0%,100%,0) 40%,hsla(0,0%,100%,0))',
+        linear:
+          'linear-gradient(90deg, rgba(210,255,218,1) 0%, rgba(182,189,255,1) 100%)',
       },
       colors: {
         brand: colorsIndigo,
         indigo: colorsIndigo,
+        'dark-gray': '#40394A',
         purple: {
           50: '#FCF4FF',
           100: '#F7DFFE',
@@ -252,8 +256,10 @@ module.exports = {
         neutral: colorsZinc,
       },
       animation: {
-        'action-bar-fade-in': '0.35s cubic-bezier(0.21, 1.02, 0.73, 1) 0s 1 normal forwards actionBarFadeIn',
-        'action-bar-fade-out': '0.2s cubic-bezier(0.06, 0.71, 0.55, 1) 0s 1 normal forwards actionBarFadeOut',
+        'action-bar-fade-in':
+          '0.35s cubic-bezier(0.21, 1.02, 0.73, 1) 0s 1 normal forwards actionBarFadeIn',
+        'action-bar-fade-out':
+          '0.2s cubic-bezier(0.06, 0.71, 0.55, 1) 0s 1 normal forwards actionBarFadeOut',
 
         'slidein-up-sm-faded': `400ms ${easingFunctions['ease-out-quart']} 0s slidein-up-sm, 200ms ${easingFunctions['ease-out-quart']} 0s fadein`,
         'slidein-right-sm-faded': `400ms ${easingFunctions['ease-out-quart']} 0s slidein-right-sm, 200ms ${easingFunctions['ease-out-quart']} 0s fadein`,
@@ -269,7 +275,10 @@ module.exports = {
         },
         actionBarFadeOut: {
           '0%': { transform: 'translate3d(0,0,-1px) scale(1)', opacity: '1' },
-          '100%': { transform: 'translate3d(0,50%,-1px) scale(.8)', opacity: '0' },
+          '100%': {
+            transform: 'translate3d(0,50%,-1px) scale(.8)',
+            opacity: '0',
+          },
         },
         fadein: {
           from: { opacity: 0 },
