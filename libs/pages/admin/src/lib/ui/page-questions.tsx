@@ -41,7 +41,7 @@ export function PageQuestion({ questions }: PageQuestionsProps) {
               setOpen(true)
             }}
           >
-            Créer un goodie
+            Créer une question
           </Button>
 
           <Modal externalOpen={open} setExternalOpen={() => setOpen(false)} buttonClose={true}>

@@ -140,7 +140,7 @@ export default function PageQuestion() {
 
               </div>
             ) : (
-              <div>Pas de goodie</div>
+              <div>Pas de question</div>
             )}
           </div>
         )}
