@@ -115,6 +115,7 @@ module.exports = {
           'calc(100vh - theme(spacing.navbar-height) - 40px)',
       },
       fontFamily: {
+        montserrat: ['Montserrat', 'sans-serif'],
         sans: ['Roboto', 'Helvetica', 'sans-serif'],
         code: ['Hack', 'sans-serif'],
         icons: ['FontAwesome'],

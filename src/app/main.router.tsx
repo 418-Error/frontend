@@ -1,6 +1,7 @@
 import { ReactElement } from 'react';
 import Home from './pages/home';
 import Question from './pages/question';
+import Ia from './pages/ia';
 
 interface RouterProps {
   path: string;
@@ -23,4 +24,10 @@ export const ROUTER: RouterProps[] = [
     protected: false,
     layout: true,
   },
+  {
+    path: '/ia',
+    component: <Ia />,
+    protected: false,
+    layout: true,
+  }
 ];
