@@ -1,9 +1,11 @@
 import { PreloadedState, combineReducers, configureStore } from '@reduxjs/toolkit'
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import {userReducer} from '@draco/domains/users'
+import {questionsReducer} from "@draco/domains/questions";
 
 export const rootReducer = combineReducers({
-  user: userReducer
+  user: userReducer,
+  question: questionsReducer
 })
 
 export function setupStore(preloadedState?: PreloadedState<RootState>) {

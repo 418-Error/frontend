@@ -19,12 +19,14 @@
       "@draco/domains/users": ["libs/domains/users/src/index.ts"],
       "@draco/enums": ["libs/shared/enums/src/index.ts"],
       "@draco/interfaces": ["libs/shared/interfaces/src/index.ts"],
+      "@draco/pages/admin": ["libs/pages/admin/src/index.ts"],
       "@draco/pages/layout": ["libs/pages/layout/src/index.ts"],
       "@draco/pages/login": ["libs/pages/login/src/index.ts"],
       "@draco/routes": ["libs/shared/routes/src/index.ts"],
       "@draco/store": ["libs/state/store/src/index.ts"],
       "@draco/ui": ["libs/shared/ui/src/index.ts"],
-      "@draco/utils": ["libs/shared/utils/src/index.ts"]
+      "@draco/utils": ["libs/shared/utils/src/index.ts"],
+      "@draco/domains/questions": ["libs/domains/questions/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
