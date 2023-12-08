@@ -24,7 +24,8 @@
       "@draco/routes": ["libs/shared/routes/src/index.ts"],
       "@draco/store": ["libs/state/store/src/index.ts"],
       "@draco/ui": ["libs/shared/ui/src/index.ts"],
-      "@draco/utils": ["libs/shared/utils/src/index.ts"]
+      "@draco/utils": ["libs/shared/utils/src/index.ts"],
+      "@draco/pages/admin": ["libs/pages/admin/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

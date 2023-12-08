@@ -1,3 +1,5 @@
+export const backendUrl = import.meta.env.VITE_BACKEND
+
 export function PageGeneral() {
   return (
     <div className="flex h-screen flex-col justify-center items-center gap-4">
@@ -16,7 +18,7 @@ export function PageGeneral() {
             </span>
           </a>
           <a
-            href="http://localhost:3333/authentication/social/redirect"
+            href={`${backendUrl}/authentication/social/redirect`}
             className="flex items-center justify-center gap-3 rounded-lg bg-[#7ECA9C] w-[345px] h-[54px] text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#24292F]"
           >
             <img className="h-5 w-5" aria-hidden="true" src="google_logo.svg" />

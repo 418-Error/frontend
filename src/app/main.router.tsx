@@ -3,6 +3,7 @@ import Home from './pages/home'
 import Ia from './pages/ia'
 import QuestionsGeneral from "./pages/questions/home"
 import PageQuestion from "./pages/questions/_id"
+import {PageAdmin} from "@draco/pages/admin";
 
 interface RouterProps {
   path: string;
@@ -30,6 +31,12 @@ export const ROUTER: RouterProps[] = [
     component: <PageQuestion />,
     protected: false,
     layout: true,
+  },
+  {
+    path: "/admin/*",
+    component: <PageAdmin />,
+    protected: true,
+    layout: false
   },
   {
     path: '/ia',

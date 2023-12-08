@@ -8,6 +8,9 @@ type ReactElementProps = {
   [props: string]: any
 }
 
+export const upperCaseFirstLetter = (string: string | undefined) =>
+  string && `${string.slice(0, 1).toUpperCase()}${string.toLowerCase().slice(1)}`
+
 export const uid = () => {
   return Date.now().toString(36) + Math.random().toString(36).substr(2)
 }

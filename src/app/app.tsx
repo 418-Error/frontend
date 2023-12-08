@@ -48,7 +48,7 @@ export default function App() {
               element={
                 !route.protected
                   ? route.component
-                  : <LayoutFeature>{ route.component }</LayoutFeature>
+                  : <ProtectedRoute>{ route.component }</ProtectedRoute>
               }
             />
           )
