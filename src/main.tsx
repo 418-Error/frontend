@@ -18,7 +18,6 @@ const queryClient = new QueryClient()
 const store = setupStore()
 
 root.render(
-  <StrictMode>
     <QueryClientProvider client={queryClient}>
       <ReactQueryDevtools initialIsOpen={false} />
 
@@ -31,5 +30,4 @@ root.render(
         </BrowserRouter>
       </Provider>
     </QueryClientProvider>
-  </StrictMode>
 )
