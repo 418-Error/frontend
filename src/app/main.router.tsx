@@ -1,7 +1,8 @@
-import { ReactElement } from 'react';
-import Home from './pages/home';
-import Question from './pages/question';
-import Ia from './pages/ia';
+import { ReactElement } from 'react'
+import Home from './pages/home'
+import Ia from './pages/ia'
+import QuestionsGeneral from "./pages/questions/home"
+import PageQuestion from "./pages/questions/_id"
 
 interface RouterProps {
   path: string;
@@ -19,8 +20,14 @@ export const ROUTER: RouterProps[] = [
     layout: true,
   },
   {
-    path: '/question/:questionid',
-    component: <Question />,
+    path: "/questions",
+    component: <QuestionsGeneral />,
+    protected: true,
+    layout: true
+  },
+  {
+    path: '/questions/:questionId',
+    component: <PageQuestion />,
     protected: false,
     layout: true,
   },

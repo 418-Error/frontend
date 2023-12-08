@@ -73,4 +73,6 @@ class PutRequest extends Request {
     })
   }
 }
-export const apiClient = new ApiClient('http://localhost:3333')
+
+export const backendUrl = import.meta.env.VITE_BACKEND
+export const apiClient = new ApiClient(backendUrl)

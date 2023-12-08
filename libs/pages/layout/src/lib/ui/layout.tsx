@@ -7,7 +7,9 @@ export default function Layout({ children }: PropsWithChildren) {
   return (
     <main>
       <Navigation />
-      <div>{ children }</div>
+      <div className="">
+        { children }
+      </div>
     </main>
   )
 }

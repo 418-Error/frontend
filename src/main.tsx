@@ -13,7 +13,13 @@ import { Provider as TooltipProvider } from '@radix-ui/react-tooltip'
 const container = document.getElementById('root') || document.createElement('div')
 const root = createRoot(container)
 
-const queryClient = new QueryClient()
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      refetchOnWindowFocus: false
+    }
+  }
+})
 
 const store = setupStore()
 
